@@ -1,0 +1,34 @@
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.6);
+  }
+}
+
+
+.map {
+  .rsm-svg {
+    animation: zoomIn 2s ease forwards;
+    // background-color: #11262f;
+  }
+
+  .rsm-geographies {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+  }
+
+  circle {
+    cursor: pointer;
+    stroke: #18934b;
+    stroke-width: 1px;
+  }
+  &:hover {
+    stroke: rgb(28, 65, 65);
+    stroke-width: 0.7px;
+  }
+}

@@ -1,0 +1,82 @@
+.header-dp {
+  color: #fff;
+  width: 99%;
+  background-color: #000;
+  .first {
+    padding-left: 3rem;
+    height: 6.5rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    background-color: #11262f;
+    svg[data-testid='ReportProblemOutlinedIcon'] {
+      color: #ffa500;
+      margin-right: 0.5rem;
+    }
+    svg[data-testid='ViewListOutlinedIcon'] {
+      color: #63f7db;
+      margin-left: 1.2rem;
+    }
+    svg[data-testid='OutlinedFlagRoundedIcon'] {
+      color: #808080;
+    }
+    .stack-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 0.7rem;
+    }
+    .stack-name-box{
+      display: flex;
+      align-items: center;
+      padding-right: 10rem;
+      border-right: 0.5px solid #808080;
+    }
+    .stack-id-box {
+      margin-left: 1.5rem;
+    }
+    .fcast {
+      display: flex;
+      margin-left: 2rem;
+      .fcast-in {
+        display: flex;
+        background-color: #193d4e;
+        border: 1px solid #193d4e;
+        border-radius: 0.5rem;
+        padding-left: 1.2rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.1rem;
+      }
+      .flag {
+        align-self: center;
+        margin-left: 3rem;
+      }
+      .title {
+        color: #808080;
+        padding-right: 6rem;
+      }
+    }
+  }
+  .second {
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: #11262f;
+    .requirements{
+      .title {
+        margin-left: 0.7rem;
+        margin-right: 1.3rem;
+      }
+      // label {
+      //   margin: 0;
+      //   padding-right: 1rem;
+      // }
+    }
+    svg[data-testid='ExpandMoreOutlinedIcon'] {
+      border-left: 0.5px solid #808080;
+      padding-left: 1rem;
+      box-sizing: content-box;
+      // position: relative;
+      // left: 1rem;
+    }
+  }
+}

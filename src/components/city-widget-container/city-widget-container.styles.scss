@@ -1,0 +1,14 @@
+.city-widget-container {
+  display: flex;
+  position: absolute;
+  top: 16rem;
+  left: 4rem;
+  margin-right: 4rem;
+  z-index: 3;
+  gap: 2rem;
+  // justify-content: center;
+  flex-wrap: wrap;
+  height: 20rem;
+  width: calc(100vw - 8rem);
+  overflow-y: scroll;
+}

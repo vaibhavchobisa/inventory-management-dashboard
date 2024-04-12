@@ -1,0 +1,15 @@
+.widget {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  height: 20rem;
+  width: calc((100vw - 18rem)/6);
+  padding: 1.5rem 1.8rem;
+  cursor: pointer;
+  color: #fff;
+
+  span{}
+}
