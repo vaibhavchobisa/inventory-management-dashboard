@@ -1,9 +1,9 @@
 .header-dp {
   color: #fff;
-  width: 99%;
+  width: 99.5%;
   background-color: #000;
   .first {
-    padding-left: 3rem;
+    padding-left: 6rem;
     height: 6.5rem;
     display: flex;
     align-items: flex-end;
@@ -16,9 +16,11 @@
     svg[data-testid='ViewListOutlinedIcon'] {
       color: #63f7db;
       margin-left: 1.2rem;
+      font-size: 1.6rem;
     }
     svg[data-testid='OutlinedFlagRoundedIcon'] {
       color: #808080;
+      font-size: 1.8rem;
     }
     .stack-name {
       font-size: 1.5rem;
@@ -33,11 +35,19 @@
     }
     .stack-id-box {
       margin-left: 1.5rem;
+      .label{
+        font-size: 1.2rem;
+      }
+      .value {
+        font-size: 1.3rem;
+      }
     }
     .fcast {
       display: flex;
-      margin-left: 2rem;
-      .fcast-in {
+      margin-left: 6rem;
+      .content {
+        height: 4.3rem;
+        font-size: 1.2rem;
         display: flex;
         background-color: #193d4e;
         border: 1px solid #193d4e;
@@ -56,11 +66,13 @@
       }
     }
   }
+
   .second {
-    padding-left: 3rem;
+    padding-left: 6rem;
     display: flex;
     align-items: center;
     background-color: #11262f;
+    height: 3.8rem;
     .requirements{
       .title {
         margin-left: 0.7rem;
@@ -75,8 +87,40 @@
       border-left: 0.5px solid #808080;
       padding-left: 1rem;
       box-sizing: content-box;
+      cursor: pointer;
       // position: relative;
       // left: 1rem;
+    }
+  }
+
+  .third {
+    padding-left: 5.5rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    background-color: #070f15;
+    .MuiFormControl-root {
+      font-size: 2rem;
+      margin-left: 3rem;
+      // color: #fff;
+      svg {
+        color: #fff;
+        font-size: 2.2rem;
+      }
+    }
+    .MuiSelect-select.MuiSelect-outlined {
+      color: #fff;
+      padding: 0.8rem;
+      font-size: 1.2rem;
+    }
+    svg[data-testid="InfoOutlinedIcon"] {
+      font-size: 2rem;
+      color: #63f7db;
+      border-right: 0.5px solid #808080;
+      padding-right: 1.5rem;
+      margin-right: 1.5rem;
+      box-sizing: content-box;
     }
   }
 }

@@ -1,0 +1,17 @@
+.details-table {
+  overflow-y: scroll;
+  height: calc(100vh - 64px - 6.5rem - 0.3rem - 3.8rem - 5rem - 38rem);
+  flex-grow: 1;
+  table {
+    height: calc(100vh - 64px - 6.5rem - 0.3rem - 3.8rem - 5rem - 38rem);
+    overflow-y: scroll;
+  }
+  tr {
+    border-bottom: 1.5px solid #808080;
+  }
+  th,td{
+    color: #fff;
+    font-size: 1.2rem;
+    overflow: scroll;
+  }
+}
