@@ -4,6 +4,7 @@ import { data } from '../../assets/city-data';
 
 
 const CityWidgetContainer = () => {
+  console.log(data);
   return (
     <div className="city-widget-container">
       {

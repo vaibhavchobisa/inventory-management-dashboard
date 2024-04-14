@@ -10,6 +10,54 @@
   padding: 1.5rem 1.8rem;
   cursor: pointer;
   color: #fff;
+  position: relative;
 
-  span{}
+  .no-forecast-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    // justify-content: space-between;
+    // align-items: flex-end;
+  }
+  
+  .per-forecast-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    // justify-content: space-between;
+  }
+
+  .chart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+    width: 14rem;
+    canvas {
+      height: 9rem;
+      width: 9rem;
+    }
+    svg[data-testid="ArrowUpwardOutlinedIcon"] {
+      color: #008000;
+    }
+    svg[data-testid="ArrowDownwardOutlinedIcon"] {
+      color: #ff0000;
+    }
+  }
+
+  .per, .num {
+    font-size: 1.9rem;
+  }
+
+  .forecast-container {
+    // position: absolute;
+    // top: 5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+    // margin-top: 3rem;
+  }
 }

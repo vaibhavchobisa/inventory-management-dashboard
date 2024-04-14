@@ -22,7 +22,7 @@ const DetailsTable = () => {
   return (
     <div className='details-table'>
       <TableContainer sx={{ overflow: 'scroll', backgroundColor: '#11262f', color: '#fff' }} component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 300 }} aria-label="simple table">
           <TableBody>
             {rows.map((row) => (
               <TableRow

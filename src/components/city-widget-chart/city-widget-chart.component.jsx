@@ -10,7 +10,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { faker } from '@faker-js/faker';
-import './details-chart-h.styles.scss';
+import './city-widget-chart.styles.scss';
 
 ChartJS.register(
   CategoryScale,
@@ -26,72 +26,70 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top',
+      display: false,
     },
     title: {
-      display: true,
-      text: 'HISTORICAL',
+      display: false,
     },
   },
   scales: {
     x: {
+      // display: false,
       grid: {
-        color: '#4b7aa2', // Color of grid lines parallel to y-axis
+        display: false,
+        // color: '#4b7aa2', // Color of grid lines parallel to y-axis
       },
       border: {
         color: '#4b7aa2'
+      },
+      ticks: {
+        display: false,
       }
     },
     y: {
+      display: false,
       min: 0,
       max: 900,
       stepSize: 100,
       grid: {
-        display: false, // Remove grid lines parallel to x-axis
+        // display: false, // Remove grid lines parallel to x-axis
       },
     },
   },
   elements: {
     point: { pointStyle: false },
     line: {
-      borderWidth: 1.5
+      borderWidth: 2,
+      tension: 1,
     }
   },
-  maintainAspectRatio: false,
+  // maintainAspectRatio: false,
 };
 
-const labels = ['Q3 2022', 'Q4 2022', 'Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023'];
 faker.seed(2);
+const labels = ['Q3 2022', 'Q4 2022', 'Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023'];
 const data = {
   labels,
   datasets: [
     {
-      label: 'AI FORECAST',
       data: labels.slice(3).map(() => faker.finance.amount({ min: 400, max: 880, dec: 0 })),
-      borderColor: '#2ec132',
-      backgroundColor: '#2ec132',
+      borderColor: '#4b7aa2',
+      backgroundColor: '#4b7aa2',
     },
     {
-      label: 'FINAL FORECAST',
       data: labels.map(() => faker.finance.amount({ min: 400, max: 880, dec: 0 })),
-      borderColor: '#f5eb0a',
-      backgroundColor: '#f5eb0a',
-    },
-    {
-      label: 'CONSUMPTION',
-      data: labels.map(() => faker.finance.amount({ min: 400, max: 880, dec: 0 })),
-      borderColor: '#76bbf8',
-      backgroundColor: '#76bbf8',
+      borderColor: '#4b7aa2',
+      backgroundColor: '#4b7aa2',
     },
   ],
 };
 
-const DetailsChartH = () => {
+const CityWidgetChart = () => {
   return (
-    <div className='details-chart-h'>
+    <div className='city-widget-chart'>
       <Line options={options} data={data} />
     </div>
   )
 }
 
-export default DetailsChartH
+export default CityWidgetChart;

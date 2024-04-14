@@ -1,3 +1,5 @@
+import { faker } from "@faker-js/faker";
+
 let data = [
   {
     city: "Boston",
@@ -45,5 +47,29 @@ let data = [
     for2: "47",
   },
 ];
+
+faker.seed(1);
+
+const generateDataArr = () => {
+  let arr = [];
+  for (let i = 0; i < 12; i++) {
+    arr.push(
+      faker.finance.amount({
+        min: 300000,
+        max: 870000,
+        dec: 0,
+        autoFormat: true,
+      })
+    );
+  }
+  return arr;
+};
+
+for (let i = 0; i < data.length; i++) {
+  data[i]["stackId"] = faker.finance.accountNumber({ length: 12 });
+  data[i]["consumptionData"] = generateDataArr();
+  data[i]["aiFData"] = generateDataArr();
+  data[i]["finalFData"] = generateDataArr();
+}
 
 export { data };

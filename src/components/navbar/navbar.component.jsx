@@ -67,9 +67,13 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function PersistentDrawerLeft() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (location.pathname !== '/') setOpen(true);
+  }, [])
 
   const handleDrawerOpen = () => {
     if (location.pathname !== '/') setOpen(true);
