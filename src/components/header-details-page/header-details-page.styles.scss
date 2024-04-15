@@ -131,6 +131,11 @@
     display: flex;
     align-items: center;
     background-color: #070f15;
+    @media only screen and (max-width: 425px) {
+      margin: 0;
+      padding-left: 2rem;
+      justify-content: flex-start;
+    }
     .MuiFormControl-root {
       font-size: 2rem;
       margin-left: 3rem;

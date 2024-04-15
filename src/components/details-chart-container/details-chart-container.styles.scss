@@ -4,7 +4,7 @@
   background-color: #0a1016;
   position: relative;
   width: calc((100vw - 330px - 4rem));
-  // width: 100%;
+  // width: 90vw;
   height: 38rem;
   margin-left: 3rem;
   margin-right: 1rem;
@@ -15,5 +15,6 @@
     align-items: center;
     justify-content: flex-start;
     margin: 0;
+    margin-top: 1rem;
   }
 }
