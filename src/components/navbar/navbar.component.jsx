@@ -106,7 +106,7 @@ export default function PersistentDrawerLeft() {
           <Typography sx={{ fontSize: '1.5rem' }} variant="h6" noWrap component="div">
             Inventory Management Dashboard
           </Typography>
-          <div style={{ position: 'absolute', right: '2rem', display: 'flex', alignItems: 'center' }}>
+          <div className='user' style={{ position: 'absolute', right: '2rem', display: 'flex', alignItems: 'center' }}>
             <IconButton size="large"
               edge="start"
               color="inherit"

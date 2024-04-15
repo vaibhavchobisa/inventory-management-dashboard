@@ -1,3 +1,10 @@
 .home {
   background-color: #11262f;
+  cursor: grab;
+}
+
+@media only screen and (max-width: 425px) {
+  .home {
+    overflow: hidden !important;
+  }
 }

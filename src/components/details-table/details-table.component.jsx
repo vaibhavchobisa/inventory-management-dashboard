@@ -32,4 +32,4 @@ const DetailsTable = ({ tableData }) => {
   )
 }
 
-export default DetailsTable
+export default DetailsTable;

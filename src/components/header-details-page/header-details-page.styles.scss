@@ -2,6 +2,9 @@
   color: #fff;
   width: 99.5%;
   background-color: #000;
+  @media only screen and (max-width: 425px) {
+    width: 100vw;
+  }
   .first {
     padding-left: 6rem;
     height: 6.5rem;
@@ -9,9 +12,16 @@
     align-items: flex-end;
     padding-bottom: 1rem;
     background-color: #11262f;
+    @media only screen and (max-width: 425px) {
+      padding-left: 1.5rem;
+      height: 10rem;
+    }
     svg[data-testid='ReportProblemOutlinedIcon'] {
       color: #ffa500;
       margin-right: 0.5rem;
+      // @media only screen and (max-width: 425px) {
+      //     font-size: 1rem;
+      //   }
     }
     svg[data-testid='ViewListOutlinedIcon'] {
       color: #63f7db;
@@ -34,6 +44,9 @@
       align-items: center;
       padding-right: 10rem;
       border-right: 0.5px solid #808080;
+      @media only screen and (max-width: 425px) {
+        padding-right: 1.5rem;
+      }
     }
     .stack-id-box {
       margin-left: 1.5rem;
@@ -43,10 +56,19 @@
       .value {
         font-size: 1.3rem;
       }
+      @media only screen and (max-width: 425px) {
+        padding: 0;
+        width: 16rem;
+      }
     }
     .fcast {
       display: flex;
       margin-left: 6rem;
+      @media only screen and (max-width: 425px) {
+        margin-left: 1rem;
+        width: 10rem;
+        margin: 0;
+      }
       .content {
         height: 4.3rem;
         font-size: 1.2rem;
@@ -57,14 +79,27 @@
         padding-left: 1.2rem;
         padding-top: 0.3rem;
         padding-bottom: 0.1rem;
+        @media only screen and (max-width: 425px) {
+          flex-direction: column;
+          align-items: flex-start;
+          height: 8rem;
+          width: 12rem;
+          font-size: 1rem;
+        }
       }
       .flag {
         align-self: center;
         margin-left: 3rem;
+        @media only screen and (max-width: 425px) {
+          margin: 0;
+        }
       }
       .title {
         color: #808080;
         padding-right: 6rem;
+        @media only screen and (max-width: 425px) {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -80,18 +115,12 @@
         margin-left: 0.7rem;
         margin-right: 1.3rem;
       }
-      // label {
-      //   margin: 0;
-      //   padding-right: 1rem;
-      // }
     }
     svg[data-testid='ExpandMoreOutlinedIcon'] {
       border-left: 0.5px solid #808080;
       padding-left: 1rem;
       box-sizing: content-box;
       cursor: pointer;
-      // position: relative;
-      // left: 1rem;
     }
   }
 

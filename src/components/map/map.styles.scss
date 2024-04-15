@@ -27,8 +27,16 @@
     stroke: #18934b;
     stroke-width: 1px;
   }
-  &:hover {
-    stroke: rgb(28, 65, 65);
-    stroke-width: 0.7px;
+}
+
+@media only screen and (max-width: 425px) {
+  .map {
+    height: calc(100vh - 4rem);
+    width: 100%;
+    overflow: hidden;
+    .rsm-svg {
+      position: relative;
+      top: calc(95vh/2);
+    }
   }
 }
