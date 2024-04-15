@@ -73,7 +73,8 @@ export default function PersistentDrawerLeft() {
 
   React.useEffect(() => {
     if (location.pathname !== '/') setOpen(true);
-  }, [])
+    else setOpen(false);
+  }, [location])
 
   const handleDrawerOpen = () => {
     if (location.pathname !== '/') setOpen(true);
@@ -82,6 +83,11 @@ export default function PersistentDrawerLeft() {
   const handleDrawerClose = () => {
     if (location.pathname !== '/') setOpen(false);
   };
+
+  const clickHandler = (e) => {
+    let city = e.target.innerText.replaceAll(' ', '').toLocaleLowerCase();
+    navigate(`/${city}`);
+  }
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -137,14 +143,15 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Typography sx={{ fontSize: '2rem', position: 'relative', left: '1.5rem' }} variant='div'>Sample Stack</Typography>
         <SidePanelTabs />
-        {/* <Divider /> */}
         <List>
-          {data.map((d, index) => (
-            <ListItem key={d.city} disablePadding>
-              <ListItemButton >
-                <ListItemText primary={d.city} />
-              </ListItemButton>
-            </ListItem>
+          {data.map((d) => (
+            <div className='city-list-name' key={d.city} onClick={clickHandler}>
+              <ListItem key={d.city} disablePadding>
+                <ListItemButton selected={location.pathname.toLocaleLowerCase().includes(d.city.replaceAll(' ', '').toLocaleLowerCase())}>
+                  <ListItemText primary={d.city} />
+                </ListItemButton>
+              </ListItem>
+            </div>
           ))}
         </List>
         <Divider />

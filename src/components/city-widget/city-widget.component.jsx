@@ -2,10 +2,16 @@ import './city-widget.styles.scss';
 import CityWidgetChart from '../city-widget-chart/city-widget-chart.component';
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
+import { useNavigate } from 'react-router-dom';
 
-const CityWidget = ({ num, per, city }) => {
+const CityWidget = ({ num, per, city, chartData1, chartData2 }) => {
+  const navigate = useNavigate();
+  const clickHandler = () => {
+    navigate(`/${city.toLocaleLowerCase()}`);
+  }
+
   return (
-    <div className="widget">
+    <div className="widget" onClick={clickHandler} >
       <h2>{city}</h2>
       <div className='forecast-container'>
         <div className="no-forecast-container">
@@ -14,7 +20,7 @@ const CityWidget = ({ num, per, city }) => {
             <span className='num'>{num}</span>
           </div>
           <div className='chart'>
-            <CityWidgetChart />
+            <CityWidgetChart chartData={chartData1} />
             <ArrowUpwardOutlinedIcon />
           </div>
         </div>
@@ -24,7 +30,7 @@ const CityWidget = ({ num, per, city }) => {
             <span className='per'>{per}%</span>
           </div>
           <div className='chart'>
-            <CityWidgetChart />
+            <CityWidgetChart chartData={chartData2} />
             <ArrowDownwardOutlinedIcon />
           </div>
         </div>

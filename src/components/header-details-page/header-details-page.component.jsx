@@ -58,7 +58,7 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const HeaderDP = () => {
+const HeaderDP = ({ cityName, stackId, forecastNum, forecastPer }) => {
   const [issue, setIssue] = useState('');
   const handleChange = (event) => {
     setIssue(event.target.value);
@@ -69,22 +69,22 @@ const HeaderDP = () => {
       <div className='first'>
         <div className='stack-name-box'>
           <ReportProblemOutlinedIcon />
-          <span className='stack-name'>Sample Stack</span>
+          <span className='stack-name'>{cityName}</span>
         </div>
         <p className='stack-id-box'>
           <span className='label'>Stack Id:&nbsp;</span>
-          <span className='value'>234342134134(demo)</span>
+          <span className='value'>{stackId}</span>
           <span><ViewListOutlinedIcon /></span>
         </p>
         <div className='fcast'>
           <div className='content'>
             <div className='prt1'>
-              <p className='title'>FORECAST(Absolute)</p>
-              <p>89%</p>
+              <p className='title'>FORECAST</p>
+              <p>{forecastNum}</p>
             </div>
             <div className='prt2'>
               <p className='title'>FORECAST(%)</p>
-              <p>80%</p>
+              <p>{forecastPer}%</p>
             </div>
           </div>
           <div className='flag'>

@@ -9,9 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { faker } from '@faker-js/faker';
 import './details-chart-f.styles.scss';
-import { color } from 'chart.js/helpers';
 
 ChartJS.register(
   CategoryScale,
@@ -66,32 +64,33 @@ const options = {
 };
 
 const labels = ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024', 'Q1 2025', 'Q2 2025'];
-faker.seed([19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]);
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'AI Forecast',
-      data: labels.map(() => faker.finance.amount({ min: 400, max: 880, dec: 0 })),
-      borderColor: '#2ec132',
-      backgroundColor: '#2ec132',
-    },
-    {
-      label: 'Final Forecast',
-      data: labels.slice(1, 4).map(() => faker.finance.amount({ min: 400, max: 880, dec: 0 })),
-      borderColor: '#f5eb0a',
-      backgroundColor: '#f5eb0a',
-    },
-    {
-      label: 'Previous Quarter Final Forecast',
-      data: labels.map(() => faker.finance.amount({ min: 400, max: 880, dec: 0 })),
-      borderColor: '#cd6686',
-      backgroundColor: '#cd6686',
-    },
-  ],
-};
 
-const DetailsChartF = () => {
+const DetailsChartF = ({ chartData }) => {
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'AI Forecast',
+        data: chartData[0]?.map(a => (a.replaceAll(',', '')) / 1000),
+        borderColor: '#2ec132',
+        backgroundColor: '#2ec132',
+      },
+      {
+        label: 'Final Forecast',
+        data: chartData[1]?.map(a => (a.replaceAll(',', '')) / 1000),
+        borderColor: '#f5eb0a',
+        backgroundColor: '#f5eb0a',
+      },
+      {
+        label: 'Previous Quarter Final Forecast',
+        data: chartData[2]?.map(a => (a.replaceAll(',', '')) / 1000),
+        borderColor: '#cd6686',
+        backgroundColor: '#cd6686',
+      },
+    ],
+  };
+
   return (
     <div className='details-chart-f'>
       <Line options={options} data={data} />
