@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const CityWidget = ({ num, per, city, chartData1, chartData2 }) => {
   const navigate = useNavigate();
   const clickHandler = () => {
-    navigate(`/${city.toLocaleLowerCase()}`);
+    navigate(`/${city.replaceAll(' ', '').toLocaleLowerCase()}`);
   }
 
   return (
