@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 import { faker } from "@faker-js/faker";
-import { data } from '../assets/city-data';
+import { data } from '../data/city-data';
 
 export const DataContext = createContext({ appData: [] });
 

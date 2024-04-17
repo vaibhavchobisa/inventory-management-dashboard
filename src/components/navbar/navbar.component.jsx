@@ -17,7 +17,7 @@ import ListItemText from '@mui/material/ListItemText';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SidePanelTabs from '../side-panel-tabs/side-panel-tabs.component';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { data } from '../../assets/city-data';
+import { data } from '../../data/city-data';
 import './navbar.styles.scss';
 
 const drawerWidth = 330;
