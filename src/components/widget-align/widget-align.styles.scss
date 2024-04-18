@@ -1,0 +1,39 @@
+.widget-align {
+  // position: relative;
+  // position: absolute;
+  position: fixed;
+  left: calc((100vw - 8rem)/2 - 9.2rem);
+  // left: 40.8vw;
+  top: 11.5rem;
+  // top: 1rem;
+  // bottom: 1rem;
+  z-index: 3;
+  // width: 100%;
+  width: 26rem;
+  height: 2.5rem;
+  // left: calc((100vw - 8rem - 24rem - 2rem)/2);
+  transition: all 2s;
+  button {
+    cursor: pointer;
+    background-color: #ffffff00;
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    color: #fff;
+    height: 2.5rem;
+    width: 6rem;
+    border: none;
+    border: 1.5px solid #8f8d8d;
+    margin-left:0.5rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+  .selected {
+    background-color: #346b77;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .widget-align {
+    display: none;
+  }
+}

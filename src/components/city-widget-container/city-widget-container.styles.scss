@@ -1,16 +1,56 @@
 .city-widget-container {
-  display: flex;
   position: absolute;
   top: 16rem;
   left: 4rem;
-  margin-right: 4rem;
   z-index: 3;
-  gap: 2rem;
-  // justify-content: center;
-  flex-wrap: wrap;
-  height: 20rem;
-  width: calc(100vw - 8rem);
-  overflow-y: scroll;
+  transition: all 2s;
+  .city-widgets {
+    display: flex;
+    margin-right: 4rem;
+    z-index: 3;
+    gap: 2rem;
+    flex-wrap: wrap;
+    height: 20rem;
+    width: calc(100vw - 8rem);
+    overflow-y: scroll;
+    transition: all 2s;
+  }
+}
+
+.left {
+  top: 15rem;
+  .city-widgets {
+    height: calc(100vh - 13rem);
+    width: calc((100vw - 18rem)/6);
+  }
+  .widget-align {
+    left: -11rem;
+    top: 50vh;
+    transform: rotate(90deg);
+    // height: calc(50vh + 12.75rem);
+    // right: 1rem;
+  }
+}
+
+.right {
+  top: 15rem;
+  left: calc(100vw - 25rem);
+  .city-widgets {
+    height: calc(100vh - 13rem);
+    width: calc((100vw - 18rem)/6);
+  }
+  .widget-align {
+    left: 90vw;
+    top: 50vh;
+    transform: rotate(90deg);
+  }
+}
+
+.bottom {
+  top: calc(100vh - 20.5rem);
+  .widget-align {
+    top: calc(100vh - 20rem - 5rem);
+  }
 }
 
 @media only screen and (max-width: 425px) {
