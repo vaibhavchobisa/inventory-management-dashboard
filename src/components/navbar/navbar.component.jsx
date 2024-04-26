@@ -74,7 +74,7 @@ export default function PersistentDrawerLeft() {
   React.useEffect(() => {
     if (location.pathname !== '/') setOpen(true);
     else setOpen(false);
-    if (window.innerWidth < 425) setOpen(false);
+    if (window.innerWidth < 450) setOpen(false);
   }, [location])
 
   const handleDrawerOpen = () => {
