@@ -21,7 +21,9 @@
   top: 15rem;
   .city-widgets {
     height: calc(100vh - 13rem);
-    width: calc((100vw - 18rem)/6);
+    width: min-content;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
   }
   .widget-align {
     left: -11rem;
@@ -37,7 +39,9 @@
   left: calc(100vw - 25rem);
   .city-widgets {
     height: calc(100vh - 13rem);
-    width: calc((100vw - 18rem)/6);
+    width: min-content;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
   }
   .widget-align {
     left: 90vw;
@@ -47,14 +51,8 @@
 }
 
 .bottom {
-  top: calc(100vh - 20.5rem);
+  top: calc(100vh - 21.5rem);
   .widget-align {
     top: calc(100vh - 20rem - 5rem);
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .city-widget-container {
-    
   }
 }
